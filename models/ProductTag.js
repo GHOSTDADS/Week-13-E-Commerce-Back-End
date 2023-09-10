@@ -10,7 +10,7 @@ ProductTag.init(
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
+      primaryKey: true, 
       autoIncrement: true,
     },
     product_id: {
@@ -20,6 +20,8 @@ ProductTag.init(
         key: 'id',
         unique: false,
       },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
     },
     tag_id: {
       type: DataTypes.INTEGER,
@@ -28,6 +30,8 @@ ProductTag.init(
         key: 'id',
         unique: false,
       },
+      onDelete: 'CASCADE',
+      onUpdate: 'CASCADE',
     },
   },
   {
